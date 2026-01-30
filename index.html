@@ -1,0 +1,25 @@
+<script>
+const students = [
+  {
+    roll: 2,
+    name: "زینت قادریہ رضویہ برکاتیہ",
+    father: "عبّاس بن حاجی اسماعیل مندھرا",
+    class: "کلاس رابعہ",
+    percentage: "83.16%"
+  }
+];
+
+function showResult() {
+  const r = document.getElementById("roll").value;
+  const s = students.find(x => x.roll == r);
+  if (s) {
+    document.getElementById("result").innerHTML =
+      "نام: " + s.name + "<br>" +
+      "والد: " + s.father + "<br>" +
+      "کلاس: " + s.class + "<br>" +
+      "فیصد: " + s.percentage;
+  } else {
+    document.getElementById("result").innerHTML = "رول نمبر نہیں ملا";
+  }
+}
+</script>
